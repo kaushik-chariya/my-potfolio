@@ -59,10 +59,9 @@ const Hero = () => {
       {/* New wrapper for positioning */}
       <div className="hero-title-container">
         <h1 className="hero-title">
-          <div className="line"><span>Zazwala Shehnazbegum</span></div>
+          <div className="line"><span>Kaushik Chariya</span></div>
         </h1>
-        {/* The new sticker image */}
-        <img src="/skincare.png" alt="Skincare sticker" className="hero-sticker" />
+
       </div>
 
       <p className="hero-subtitle">AI , Data Science & Machine Learning Enthusiast</p>

@@ -1,68 +1,62 @@
-import React, { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import './CustomCursor.css';
+import { useEffect, useRef } from "react";
 
-const CustomCursor = () => {
+export default function CustomCursor() {
   const cursorRef = useRef(null);
+  const position = useRef({ x: 0, y: 0 });
+  const target = useRef({ x: 0, y: 0 });
+  const isHovering = useRef(false);
 
-  // We use useGSAP for safe animation cleanup
-  useGSAP(() => {
-    // Check if the user is on a touch device
-    if ('ontouchstart' in window) {
-      // Don't run the cursor logic on touch devices
-      if (cursorRef.current) {
-        cursorRef.current.style.display = 'none';
-      }
-      return;
-    }
-
-    // GSAP's quickTo is a high-performance way to animate properties
-    const xTo = gsap.quickTo(cursorRef.current, "x", { duration: 0.5, ease: "power3" });
-    const yTo = gsap.quickTo(cursorRef.current, "y", { duration: 0.5, ease: "power3" });
-
-    // The main event listener that updates the cursor's position
+  useEffect(() => {
     const moveCursor = (e) => {
-      xTo(e.clientX);
-      yTo(e.clientY);
+      target.current = { x: e.clientX, y: e.clientY };
+    };
+
+    const handleHover = (e) => {
+      isHovering.current = !!e.target.closest("a, button");
     };
 
     window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mouseover", handleHover);
 
-    // --- Hover Effect ---
-    // Select all interactive elements
-    const interactiveElements = document.querySelectorAll(
-      'a, button, .project-card, .navbar-logo'
-    );
+    const animate = () => {
+      // smooth follow
+      position.current.x += (target.current.x - position.current.x) * 0.15;
+      position.current.y += (target.current.y - position.current.y) * 0.15;
 
-    const onMouseEnter = () => {
-      gsap.to(cursorRef.current, { scale: 1.5, duration: 0.3 }); // Grow the cursor
+      const size = isHovering.current ? 50 : 20;
+
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate(${position.current.x}px, ${position.current.y}px) translate(-50%, -50%)`;
+        cursorRef.current.style.width = `${size}px`;
+        cursorRef.current.style.height = `${size}px`;
+      }
+
+      requestAnimationFrame(animate);
     };
 
-    const onMouseLeave = () => {
-      gsap.to(cursorRef.current, { scale: 1, duration: 0.3 }); // Shrink it back
-    };
+    animate();
 
-    interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', onMouseEnter);
-      el.addEventListener('mouseleave', onMouseLeave);
-    });
-    
-    // Cleanup function
     return () => {
       window.removeEventListener("mousemove", moveCursor);
-      interactiveElements.forEach((el) => {
-        el.removeEventListener('mouseenter', onMouseEnter);
-        el.removeEventListener('mouseleave', onMouseLeave);
-      });
+      window.removeEventListener("mouseover", handleHover);
     };
-  });
+  }, []);
 
   return (
-    <div className="custom-cursor" ref={cursorRef}>
-      <img src="/skincare.png" alt="Custom Cursor" />
-    </div>
+    <div
+      ref={cursorRef}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "20px",
+        height: "20px",
+        border: "1.5px solid var(--primary-accent)",
+        borderRadius: "50%",
+        pointerEvents: "none",
+        zIndex: 9999,
+        transition: "width 0.2s ease, height 0.2s ease",
+      }}
+    />
   );
-};
-
-export default CustomCursor;
+}

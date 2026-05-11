@@ -47,7 +47,6 @@
 .skill-item {
   /* --- THE FIX IS HERE --- */
   color: var(--font-color); /* This line explicitly sets the text color */
-  
   background-color: var(--bg-color);
   border: 1px solid var(--subtle-stroke);
   padding: 8px 15px;

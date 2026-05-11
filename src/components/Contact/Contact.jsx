@@ -29,7 +29,7 @@ const Contact = () => {
       <p className="contact-text">
         I'm currently seeking new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll do my best to get back to you!
       </p>
-      <a href="mailto:shehnazzazwala1@gmail.com" className="contact-button">Say Hello</a>
+      <a href="mailto:chariyakaushik1435@gmail.com" className="contact-button">Say Hello </a>
     </section>
   );
 };

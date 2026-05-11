@@ -43,32 +43,20 @@ const About = () => {
 
   return (
     <section id="about" ref={container}>
-      <h2 className="section-title">About Me</h2>
-      <div className="about-grid">
-        {/* Left side: Photo and Sticker */}
-        <div className="about-photo-container about-content-item">
-          {/* UPDATED: Using hi.png for the main photo */}
-          <img src="/lapcut1.png" alt="Shehnaz Zazwala" className="about-photo" />
-          
-          {/* UPDATED: Using hello.png for the sticker */}
-          {/* <img src="/hello.png" alt="Hello sticker" className="hii-sticker" /> */}
-        </div>
-
-        {/* Right side: Text Content */}
-        <div className="about-text">
-          <p className="about-content-item">
-            Hi, I'm Shehnazbegum Zazwala (but you can call me Shehnaz!).
+      <h2 className="section-title">About</h2>
+      <div className="about-text-center">
+          <p className="about-content-item about-intro">
+            Hi, I'm Kaushik Chariya.
           </p>
           <p className="about-content-item">
-            I'm a recent Information Technology graduate from the LJ Institute of Engineering and Technology, where I completed my four-year Bachelor of Engineering degree. My academic journey ignited a deep passion for the worlds of Artificial Intelligence, Data Science, and Machine Learning, and I am now actively seeking opportunities where I can apply my skills to solve real-world challenges.
+            I am currently pursuing a Master of Computer Applications (MCA) from Gujarat Technological University. I previously completed my Bachelor of Computer Applications from Bhakta Kavi Narsinh Mehta University. I have a strong interest in Artificial Intelligence, Data Science, and Machine Learning, and I enjoy working on real-world problems using data-driven approaches.
           </p>
           <p className="about-content-item">
-            This passion isn't just theoretical; it's the driving force behind my hands-on projects, which span from complex Machine Learning models to robust applications using Python, DBMS, and the MERN stack. I thrive in collaborative, high-pressure environments, an experience I've eagerly sought out by participating in hackathons like DA-IICT's HackOut'23, the NASA Space Apps Challenge, and Datathrone.
+            I started with the fundamentals of Python programming and gradually moved into data analysis using libraries such as Pandas, NumPy, and Matplotlib. Exploring datasets through Exploratory Data Analysis (EDA) helped me understand patterns, trends, and relationships within data. As I progressed, I learned various machine learning algorithms including Linear Regression, Logistic Regression, Decision Trees, and Random Forest. I also focused on understanding key concepts such as model evaluation, feature engineering, and handling real-world data challenges like missing values and outliers.
           </p>
           <p className="about-content-item">
-            Beyond the keyboard, I'm a creative at heart. In my free time, you'll find me painting, sketching, or doodling. My time playing on a state-level school basketball team also taught me the value of discipline, teamwork, and a competitive drive to succeed—qualities I bring to every project I undertake.
+            I'm passionate about listening to music and keeping up with new trends and emerging technologies, always curious to learn and explore beyond my comfort zone. I enjoy discovering innovative ideas, staying updated with the latest advancements in technology, and continuously enhancing my knowledge through self-learning and exploration.
           </p>
-        </div>
       </div>
     </section>
   );

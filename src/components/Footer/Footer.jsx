@@ -3,8 +3,8 @@ import './Footer.css';
 
 // Your social media links
 const socialLinks = {
-  github: "https://github.com/Shehnazzazwala",
-  linkedin: "https://www.linkedin.com/in/shehnaz-zazwala-826909227/",
+  github: "https://github.com/kaushik-chariya",
+  linkedin: "https://www.linkedin.com/in/kaushik-chariya",
 };
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
           <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-        <p>© 2025 Zazwala Shehnazbegum.</p>
+        <p>© 2026 Kaushik Chariya.</p>
       </div>
     </footer>
   );

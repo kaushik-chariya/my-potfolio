@@ -35,14 +35,15 @@ const Navbar = () => {
   return (
     <header className="navbar" ref={headerRef}>
       <nav className="navbar-container">
-        <a href="/" className="navbar-logo">SZ</a>
+        <a href="/" className="navbar-logo">CK</a>
         <ul className="navbar-menu">
           <li><a href="/#about" className="navbar-link">About</a></li>
-          <li><a href="/#experience" className="navbar-link">Journey</a></li>
-          <li><a href="/#projects" className="navbar-link">Projects</a></li>
-          <li><a href="/#skills" className="navbar-link">Skills</a></li>
+          <li><a href="/#experience" className="navbar-link">My Journey</a></li>
+          <li><a href="/#projects" className="navbar-link">Creations</a></li>
+          <li><a href="/#skills" className="navbar-link">Abilities</a></li>
+          <li><a href="/#skills" className="navbar-link">Achievements</a></li>
           <li><a href="/#contact" className="navbar-link">Contact</a></li>
-          <li> <a href="/Shehnazbegum_Zazwala_Resume.pdf" target="_blank" rel="noopener noreferrer" className="navbar-resume-button">Resume</a></li>
+          <li> <a href="/Kaushik_Chariya_DA.pdf" target="_blank" rel="noopener noreferrer" className="navbar-resume-button">My Resume</a></li>
         </ul>
        
       </nav>

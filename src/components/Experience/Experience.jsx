@@ -9,21 +9,21 @@ gsap.registerPlugin(ScrollTrigger);
 const timelineData = [
   {
     year: "2025 - Present",
-    title: "Data Science Intern",
-    company: "PetPooja",
-    description: "Gained hands-on experience in data science, contributing to real-world projects and enhancing analytical skills."
+    title: "Master of Computer Applications (MCA)",
+    company: "Gujarat Technological University",
+    description: "At Gujarat Technological University, I built a solid understanding of Machine Learning techniques and core algorithms through practical implementation."
   },
   {
-    year: "2021 - 2025",
-    title: "Bachelor of Engineering in IT",
-    company: "LJ Institute of Engineering and Technology",
-    description: "Completed a comprehensive degree in Information Technology with a CGPA of 7.94, focusing on core areas like AI, ML, and software development."
+    year: "2025 - 2026",
+    title: "Completed Machine Learning training...",
+    company: "QSpiders | Empowering IT & Software Careers with...",
+    description: "Gained hands-on experience in data Analysis, contributing to real-world projects and enhancing analytical skills."
   },
   {
-    year: "2023",
-    title: "Website Designing Head",
-    company: "Exympower Innovation",
-    description: "Led web design initiatives, overseeing the creation and implementation of innovative website solutions."
+    year: "2022 - 2025",
+    title: "Bachelor of Computer Applications (B.C.A)",
+    company: "Bhakta Kavi Narsinh Mehta University.",
+    description: "Completed a Bachelor of Computer Applications (B.C.A) with a CGPA of 7.89, focusing on core areas like Python, SQL, and web development."
   },
 ];
 

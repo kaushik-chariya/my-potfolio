@@ -3,16 +3,20 @@
 
 :root {
   /* Nude & Earthy Color Palette */
-  --bg-color: #FDFBF8;         /* Creamy Off-White */
-  --font-color: #4A4A4A;       /* Dark Charcoal */
-  --card-bg: #FFFFFF;         /* Clean White */
-  --primary-accent: #E07A5F;   /* Terracotta */
-  --secondary-accent: #F4F1DE; /* Light Beige for backgrounds */
-  --subtle-stroke: #EAEAEA;   /* Light Grey for borders */
-  --shadow-color: rgba(0, 0, 0, 0.08);
+  --bg-color: #020000;         /* Dark Background */
+  --font-color: #ffffff;       /* Dark Charcoal */
+  --card-bg: hero-section#e2d0d0d2;         /* Dark Card Background */
+  --primary-accent: #99acd6ce;   /* Terracotta */   /*c8d9e3d7 */
+  --secondary-accent: #46587c8c; /* Light Beige for backgrounds */
+  --subtle-stroke: #dcdcebd8;   /* Light Grey for borders */
+  --shadow-color: rgba(255, 255, 255, 0.375);
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Poppins', sans-serif;
+}
+
+* {
+  cursor: none !important;
 }
 
 html {
@@ -29,10 +33,13 @@ body {
 }
 
 .container {
+  
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+
 
 section {
   padding: 100px 0;

@@ -3,7 +3,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
+
+
 
 /* --- NEW: Wrapper for positioning --- */
 .hero-title-container {

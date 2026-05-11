@@ -97,23 +97,30 @@ export const projectsData = [
   },
 
   {
-    slug: "pokemon-battle-game",
-    title: "Pokemon Battle Game",
-    subtitle: "A fully functional, turn-based battle game created with Pygame and a live API.",
-    tech: ["Python", "Pygame", "API Integration", "REST APIs"],
-    description: "A fully functional Pokemon battle game using Pygame, featuring turn-based combat and dynamic game logic.",
+    slug: "ecommerce-sales-dashboard",
+    title: "E-commerce Sales Analytics Dashboard",
+    subtitle: "An interactive analytics dashboard built with Flask and PostgreSQL for real-time sales insights.",
+    tech: ["Python",
+    "Flask",
+    "PostgreSQL",
+    "Pandas",
+    "Chart.js",
+    "HTML",
+    "CSS"],
+    description: "A dynamic e-commerce dashboard that allows users to analyze sales data using multiple filters and visualize business insights through interactive charts.",
     liveLink: "#",
-    githubLink: "https://github.com/Shehnazzazwala/Pokemon-Battle-Game",
-    imageUrl: "/project-pokemon.png",
-    heroImage: "/hero-pokemon.png", // A GIF WOULD BE COOL HERE!
-    overview: "This project is an interactive recreation of a classic Pokemon battle. It features a full graphical interface built with Pygame, turn-based combat logic, and dynamic fetching of Pokemon data (like stats and moves) from the public PokeAPI.",
+    githubLink: "https://github.com/kaushik-chariya/ecommerce-sales-analysis",
+    imageUrl: "../public/back-analysis.jpg",
+    heroImage: "../public/main.jpg", // A GIF WOULD BE COOL HERE!
+    overview: "This project is a full-stack data analytics dashboard designed to analyze e-commerce sales performance. It integrates a PostgreSQL database with a Flask backend and provides interactive visualizations using Chart.js. Users can filter data dynamically and gain insights into business trends such as regional performance, category sales, and monthly growth.",
     keyFeatures: [
-      "**Graphical User Interface:** All visuals, from health bars to attack animations, are rendered with the Pygame library.",
-      "**Turn-Based Logic:** A state machine manages the flow of combat, ensuring a bug-free, turn-by-turn experience.",
-      "**Live Data:** Integrates with an external REST API to fetch character data, making the game engaging and up-to-date."
+      "**Advanced Filtering:** Filter data by region, category, sub-category, segment, ship mode, state, and date range.",
+      "**Dashboard Metrics:** Displays total sales, total orders, and unique product counts for quick insights.",
+      "**Interactive Visualizations:** Includes category-wise sales charts, regional analysis, and monthly trends using Chart.js.",
+      "**Dynamic Updates:** Dashboard updates instantly based on user-selected filters for real-time analysis."
     ],
-    challenges: "The biggest challenge was managing the game state (whose turn it is, health points, etc.).",
-    solution: "I implemented a state machine pattern to keep the logic clean and easy to debug, separating the game's rules from its visual representation.",
-    learnings: "I learned how to build a complete application from scratch with Python, handle real-time user input, and integrate with external APIs. This project was a fantastic exercise in object-oriented programming and application design."
+    challenges: "Handling dynamic filtering across multiple parameters while maintaining performance was challenging. Ensuring smooth interaction between Flask backend and frontend charts required careful data structuring.",
+    solution: "I optimized database queries and used Pandas for efficient data processing. The backend sends structured JSON responses to the frontend, enabling seamless updates of charts without reloading the page.",
+    learnings: "I learned how to build a complete data-driven web application by integrating backend, database, and frontend visualization. This project improved my skills in Flask development, SQL optimization, and data visualization using Chart.js."
   }
 ];
