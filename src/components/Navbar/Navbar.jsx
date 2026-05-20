@@ -41,7 +41,7 @@ const Navbar = () => {
           <li><a href="/#experience" className="navbar-link">My Journey</a></li>
           <li><a href="/#projects" className="navbar-link">Creations</a></li>
           <li><a href="/#skills" className="navbar-link">Abilities</a></li>
-          <li><a href="/#skills" className="navbar-link">Achievements</a></li>
+          <li><a href="/#achievements" className="navbar-link">Achievements</a></li>
           <li><a href="/#contact" className="navbar-link">Contact</a></li>
           <li> <a href="/Kaushik_Chariya_DA.pdf" target="_blank" rel="noopener noreferrer" className="navbar-resume-button">My Resume</a></li>
         </ul>

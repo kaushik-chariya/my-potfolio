@@ -1,0 +1,141 @@
+/* Ambient Background Container */
+.ambient-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Keep it behind all page content */
+  background-color: #000000;
+  overflow: hidden;
+  pointer-events: none; /* Let all mouse/click events pass through to content */
+  user-select: none;
+}
+
+/* Dynamic cursor glow */
+.cursor-ambient-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 800px;
+  /* Soft pure white radial gradient */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 45%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+  will-change: transform, opacity;
+  opacity: 0.8; /* Starts at 0.8 and fades up/down dynamically */
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Drifting background glow layers to create depth */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  filter: blur(140px);
+}
+
+/* Orb 1: Pure white light on the upper-left area */
+.orb-warm {
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: -20%;
+  left: -10%;
+  animation: drift-orb-one 28s infinite alternate ease-in-out;
+}
+
+/* Orb 2: Pure white light on the bottom-right area */
+.orb-cool {
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.015) 50%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  bottom: -20%;
+  right: -10%;
+  animation: drift-orb-two 32s infinite alternate ease-in-out;
+}
+
+/* Orb 3: Pure white neutral center-left ambient glow */
+.orb-neutral {
+  width: 1100px;
+  height: 1100px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.01) 55%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  top: 15%;
+  left: 20%;
+  animation: drift-orb-three 36s infinite alternate-reverse ease-in-out;
+}
+
+/* Float / Drift Animations for the background orbs */
+@keyframes drift-orb-one {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(60px, 40px, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-30px, -60px, 0) scale(0.95);
+  }
+}
+
+@keyframes drift-orb-two {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+  50% {
+    transform: translate3d(-50px, 70px, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(40px, -30px, 0) scale(1);
+  }
+}
+
+@keyframes drift-orb-three {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+  50% {
+    transform: translate3d(50px, -50px, 0) scale(0.95);
+  }
+  100% {
+    transform: translate3d(-50px, 50px, 0) scale(1.05);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cursor-ambient-glow {
+    width: 500px;
+    height: 500px;
+    filter: blur(40px);
+  }
+  
+  .orb-warm, .orb-cool, .orb-neutral {
+    width: 600px;
+    height: 600px;
+    filter: blur(80px);
+  }
+}

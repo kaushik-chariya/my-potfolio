@@ -1,11 +1,11 @@
-.skills-container {
+.achievements-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
 
-.skills-category {
+.achievement-card {
   box-sizing: border-box;
   background-color: var(--card-bg);
   border: 1px solid var(--subtle-stroke);
@@ -13,21 +13,29 @@
   border-radius: 8px;
   box-shadow: 0 5px 15px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  .skills-category {
+  .achievement-card {
     width: calc(50% - 1rem);
   }
 }
 
-.skills-category:hover {
+@media (min-width: 992px) {
+  .achievement-card {
+    width: calc(33.333% - 1.34rem);
+  }
+}
+
+.achievement-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px -10px var(--shadow-color);
 }
 
-.skills-category h3 {
+.achievement-header h3 {
   font-family: var(--font-sans);
   font-weight: 600;
   color: var(--font-color);
@@ -40,21 +48,21 @@
   gap: 10px;
 }
 
-.skills-category h3::before {
-  content: '⚙️';
+.achievement-body {
+  margin-bottom: 1.5rem;
 }
 
-.skills-list {
+.achievements-list {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
 
-.skill-item {
-  /* --- THE FIX IS HERE --- */
-  color: var(--font-color); /* This line explicitly sets the text color */
+.achievement-item {
+  color: var(--font-color);
   background-color: var(--bg-color);
   border: 1px solid var(--subtle-stroke);
   padding: 8px 15px;
@@ -64,8 +72,27 @@
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.skill-item:hover {
+.achievement-item:hover {
   background-color: var(--primary-accent);
   color: white;
   border-color: var(--primary-accent);
+}
+
+.achievement-footer {
+  margin-top: auto; /* Pushes the button to the bottom of the card */
+  padding-top: 1rem;
+}
+
+.view-cert-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary-accent);
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.view-cert-btn:hover {
+  transform: translateX(5px);
+  color: var(--font-color);
 }

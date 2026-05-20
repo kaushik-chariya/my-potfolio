@@ -3,15 +3,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
+/* --- Wrapper for Two-Column Layout --- */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
 
+.hero-content {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
 
-/* --- NEW: Wrapper for positioning --- */
 .hero-title-container {
   position: relative;
-  display: inline-block; /* Makes the container only as wide as its content */
+  display: inline-block;
 }
 
 .hero-title {
@@ -32,21 +43,31 @@
   display: block;
 }
 
-/* --- NEW: Styles for the sticker --- */
-.hero-sticker {
-  position: absolute;
-  top: -10px;
-  right: -60px; /* Positions it to the right of the title */
-  width: 120px; /* Adjust size as needed */
-  height: auto;
-  z-index: 10;
-}
-
 .hero-subtitle {
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   color: var(--primary-accent);
   margin-top: 1.5rem;
   margin-bottom: 2.5rem;
+  min-height: 2.25rem; /* Prevents layout shifting when text is deleted */
+  display: flex;
+  align-items: center;
+}
+
+.typing-text {
+  display: inline-block;
+}
+
+.typing-cursor {
+  font-weight: 200;
+  color: var(--primary-accent);
+  animation: blink-cursor 1s step-end infinite;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+@keyframes blink-cursor {
+  from, to { color: transparent }
+  50% { color: var(--primary-accent); }
 }
 
 .hero-button {
@@ -55,15 +76,11 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  /* transition: all 0.3s ease; */
-  
-  /* --- THIS IS THE FIX --- */
-  /* This tells the button NOT to stretch to the full width. */
   align-self: flex-start;
-  background-color: var(--primary-accent); /* Terracotta background */
-  color: white;                             /* White text */
-  border: 2px solid var(--primary-accent);  /* Terracotta border */
-  border-radius: 15px; 
+  background-color: var(--primary-accent);
+  color: white;
+  border: 2px solid var(--primary-accent);
+  border-radius: 15px;
 }
 
 .hero-button:hover {
@@ -73,17 +90,128 @@
   box-shadow: 0 10px 20px -10px var(--primary-accent);
 }
 
-/* --- NEW: Responsive styles for the sticker --- */
-@media (max-width: 768px) {
-  .hero-sticker {
-    width: 80px; /* Make it smaller on tablets */
-    top: -5px;
-    right: -20px;
+/* --- Styles for AI Mascot Image --- */
+.hero-image-container {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-right: -60px; /* Shifts the image slightly to the right on desktop */
+}
+
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 35px rgba(211, 214, 223, 0.2));
+}
+
+.hero-whatsapp-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.hero-whatsapp-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.hero-whatsapp-btn:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -10px white;
+}
+
+/* Typewriter animation for "WhatsApp" text */
+.wa-btn-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: wa-typewriter 4s steps(8) infinite;
+  font-family: var(--font-sans);
+}
+
+.wa-btn-cursor {
+  font-weight: 200;
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes wa-typewriter {
+  0%   { width: 0; }
+  25%  { width: 9ch; }     /* Fully typed */
+  50%  { width: 9ch; }     /* Pause while visible */
+  75%  { width: 0; }       /* Fully erased */
+  100% { width: 0; }       /* Pause while hidden */
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-subtitle {
+    justify-content: center;
+  }
+
+  .hero-button {
+    align-self: center;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0; /* Reset margin on smaller screens */
+  }
+
+  .hero-image {
+    max-height: 350px;
+  }
+
+  .hero-whatsapp-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-sticker {
-    display: none; /* Hide it completely on small mobile screens */
+  .hero-image {
+    max-height: 260px;
   }
+
+
 }
