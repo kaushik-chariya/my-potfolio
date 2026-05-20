@@ -74,14 +74,14 @@
   transition: transform 0.25s ease-out;
 }
 
-.navbar-link:hover::after {
+/* .navbar-link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
+} */
 .navbar-resume-button {
   padding: 8px 16px;
   border: 1px solid var(--primary-accent);
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: transparent;
   color: var(--primary-accent);
   text-decoration: none;

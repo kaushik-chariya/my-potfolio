@@ -12,7 +12,7 @@ export default function CustomCursor() {
     };
 
     const handleHover = (e) => {
-      isHovering.current = !!e.target.closest("a, button");
+      isHovering.current = !!e.target.closest("a, button, .skill-item");
     };
 
     window.addEventListener("mousemove", moveCursor);

@@ -7,10 +7,11 @@ import './Skills.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = {
-  "Programming Languages": ["Python", "SQL", "JavaScript"],
   "Data Science & ML": ["NumPy", 'Pandas',"Scikit-Learn",'Statsmodels', "OpenCV"],
+  "MLOps & Deployment" : ['Docker','Kubernetes','MLflow','DVC','FastAPI','GitHub Actions'],
+  "Programming Languages": ["Python", "SQL", "JavaScript"],
   "Databases": ["MySQL", "PostgreSQL"],
-  'Data Visualization & Tools' : ["Matplotlib", "Seaborn",'Plotly', "Excel", "Tableau"],
+  'Monitoring & Visualization' : ["Matplotlib", "Seaborn",'Plotly', "Excel", "Tableau",'Grafana','Prometheus'],
   "Web Development": ["HTML", "CSS", "Tailwind CSS", "JavaScript", "Reactjs"],
 };
 

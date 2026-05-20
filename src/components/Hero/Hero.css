@@ -63,7 +63,7 @@
   background-color: var(--primary-accent); /* Terracotta background */
   color: white;                             /* White text */
   border: 2px solid var(--primary-accent);  /* Terracotta border */
-  border-radius: 50px; 
+  border-radius: 15px; 
 }
 
 .hero-button:hover {

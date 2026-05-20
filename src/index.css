@@ -3,10 +3,10 @@
 
 :root {
   /* Nude & Earthy Color Palette */
-  --bg-color: #020000;         /* Dark Background */
+  --bg-color: #000000;         /* Dark Background */
   --font-color: #ffffff;       /* Dark Charcoal */
   --card-bg: hero-section#e2d0d0d2;         /* Dark Card Background */
-  --primary-accent: #99acd6ce;   /* Terracotta */   /*c8d9e3d7 */
+  --primary-accent: #d3d6dfab;   /* Terracotta */   /*c8d9e3d7 */
   --secondary-accent: #46587c8c; /* Light Beige for backgrounds */
   --subtle-stroke: #dcdcebd8;   /* Light Grey for borders */
   --shadow-color: rgba(255, 255, 255, 0.375);
