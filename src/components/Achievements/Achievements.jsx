@@ -8,77 +8,70 @@ gsap.registerPlugin(ScrollTrigger);
 
 const achievementsData = [
   {
-    title: "Machine Learning Specialization",
+    title: "Machine Learning",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    provider: "AWS Foundations",
+    providerLink: "https://aws.amazon.com/certification/",
     skills: ["Supervised Learning", "Regression", "Decision Trees", "Neural Networks", "Unsupervised Learning"],
     link: "https://www.coursera.org"
   },
   {
-    title: "Deep Learning Specialization",
-    skills: ["CNN", "RNN & LSTM", "TensorFlow", "Hyperparameter Tuning", "Sequence Models"],
-    link: "https://www.coursera.org"
+    title: "🧠 Machine Learning",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    provider: "AWS Foundations",
+    providerLink: "https://aws.amazon.com/certification/",
+    skills: ["Supervised Learning", "Regression", "Decision Trees", "Neural Networks", "Unsupervised Learning"],
+    link: "/ml.pdf"
   },
   {
-    title: "Data Science Professional Certificate",
-    skills: ["Python", "SQL", "Data Analysis (Pandas)", "Data Visualization (Seaborn)"],
-    link: "https://www.coursera.org"
+    title: "📊 Data Science & Analytics",
+    icon: "https://cdn.simpleicons.org/hp/0096D6",
+    provider: "HP Foundation",
+    providerLink: "https://www.life-global.org",
+    skills: ["Python", "SQL", "Data Analysis (np, pd)", "Data Visualization (plt, sns)", 'Fundamentals of ML'],
+    link: "/public/Data Science & Analytics.pdf"
   },
   {
-    title: "SQL for Data Science",
-    skills: ["Database Design", "Joins & Subqueries", "PL/SQL", "Query Optimization"],
-    link: "https://www.coursera.org"
+    title: "🐍 Data Analysis with Python",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+    provider: "IBM",
+    providerLink: "https://cognitiveclass.ai",
+    skills: ["Python", "NumPy", "Pandas", "Data Analysis",'Data Cleaning','Exploratory Data Analysis','Data Visualization'],
+    link: "/public/data-analysis.pdf"
   },
   {
-    title: "Python for Everybody",
-    skills: ["Python OOP", "Data Structures", "Web Scraping", "XML/JSON Processing"],
-    link: "https://www.coursera.org"
+    title: "📈 Data Visualisation",
+    icon: "https://cdn.simpleicons.org/tata",
+    provider: "Tata Group",
+    providerLink: "https://www.theforage.com/",
+    skills: ["Data Visualization", "Business Insights", "Exploratory Data Analysis", "Visual Storytelling",'Data Communication'],
+    link: "/public/data-visulation.pdf"
   },
   {
-    title: "Data Visualization with Tableau",
-    skills: ["Interactive Dashboards", "Visual Storytelling", "Data Blending", "BI Analytics"],
-    link: "https://www.coursera.org"
-  },
-  {
-    title: "MLOps and Production Pipelines",
-    skills: ["Docker", "Model Deployment", "FastAPI", "GitHub Actions", "CI/CD"],
-    link: "https://www.coursera.org"
-  },
-  {
-    title: "Computer Vision Basics",
-    skills: ["OpenCV", "Image Processing", "Object Detection", "YOLOv8"],
-    link: "https://www.coursera.org"
-  },
-  {
-    title: "Natural Language Processing (NLP)",
-    skills: ["Transformers", "BERT", "Hugging Face", "Sentiment Analysis"],
-    link: "https://www.coursera.org"
-  },
-  {
-    title: "Data Structures & Algorithms in Python",
-    skills: ["Dynamic Programming", "Sorting", "Graph Algorithms", "Search Algorithms"],
-    link: "https://www.coursera.org"
-  },
-  {
-    title: "Git & GitHub Version Control",
-    skills: ["Version Control", "Pull Requests", "Merge Conflict Resolution", "Branching Workflows"],
-    link: "https://www.google.com"
+    title: "🗄️ SQL & Relational Databases",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+    provider: "IBM",
+    providerLink: "https://cognitiveclass.ai/",
+    skills: ["SQL", "Database Design", "Relational Databases",'Joins and Subqueries','Query Optimization'],
+    link: "/public/sql-certificate.pdf"
   }
 ];
 
 const Achievements = () => {
   const container = useRef();
-
+  
   useGSAP(() => {
-    gsap.from(".achievement-card", {
+    gsap.from(".achievement-item", {
       scrollTrigger: {
         trigger: container.current,
         start: 'top 80%',
         toggleActions: "play none none none"
       },
-      duration: 0.6,
+      duration: 0.5,
       opacity: 0,
-      y: 50,
+      x: -30,
       stagger: 0.1,
-      ease: 'power3.out'
+      ease: 'power2.out'
     });
   }, { scope: container });
 
@@ -89,7 +82,23 @@ const Achievements = () => {
         {achievementsData.map((cert, index) => (
           <div className="achievement-card" key={index}>
             <div className="achievement-header">
-              <h3>🏆 {cert.title}</h3>
+              <h3> {cert.title}
+              </h3>
+              <div className="provider-row">
+                <img 
+                src={cert.icon} 
+                alt={cert.provider} 
+                className="provider-icon" />
+
+                <a 
+                href={cert.providerLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="provider view-cert-btn"
+                >
+                {cert.provider}
+                </a>
+              </div>
             </div>
             <div className="achievement-body">
               <ul className="achievements-list">

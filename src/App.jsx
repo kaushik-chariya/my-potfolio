@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './ScrollToTop';
 import CustomCursor from './components/CustomCursor/CustomCursor';
-import AmbientBackground from './components/AmbientBackground/AmbientBackground';
+// import AmbientBackground from './components/AmbientBackground/AmbientBackground';
 
 // Import Page Components
 import HomePage from './pages/HomePage';
@@ -16,7 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* Fixed canvas background — z-index -1, behind all content */}
-      <AmbientBackground />
+      {/* <AmbientBackground /> */}
 
       <CustomCursor />
       <ScrollToTop />

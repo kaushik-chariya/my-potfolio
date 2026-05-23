@@ -1,14 +1,14 @@
 // src/projectData.js
 export const projectsData = [
   {
-    slug: "swift-scan-traffic-monitoring",
-    title: "Swift Scan: Real-Time Traffic Monitoring",
-    subtitle: "An AI-powered system for vehicle detection, tracking, and license plate recognition.",
-    tech: ["AI/ML", "YOLOv8", "SORT", "EasyOCR", "Python", "OpenCV"],
+    slug: "Deep Shield Mail — AI-Powered Email Spam Detection⁠",
+    title: "Deep Shield Mail — AI-Powered Email Spam Detection⁠",
+    subtitle: "Built with ML models to classify and filter spam emails, detecting phishing, fraud, and business email compromise.",
+    tech: ["Python", "Flask", "Scikit-learn","Naive Bayes", "Gmail API", "MLflow", "Pandas", 'Numpy'],
     description: "Integrates vehicle detection, tracking, and license plate recognition to monitor traffic in real-time.",
     githubLink: "https://github.com/Shehnazzazwala/SwiftScan",
-    imageUrl: "/project_swiftscan.png",
-    heroImage: "/hero_swiftscan.png",
+    imageUrl: "/public/email-fraud-investigation.webp",
+    heroImage: "/public/email-fraud-investigation.webp",
     overview: "Swift Scan is an advanced AI/ML project designed for real-time traffic analysis. It uses the state-of-the-art YOLOv8 model for object detection, the SORT algorithm for tracking vehicles across frames, and EasyOCR for accurate license plate recognition from video feeds.",
     keyFeatures: [
       "**Real-Time Detection:** Utilizes the YOLOv8 object detection model for high-accuracy, real-time identification of vehicles.",

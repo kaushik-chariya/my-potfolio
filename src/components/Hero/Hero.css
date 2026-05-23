@@ -112,7 +112,7 @@
 .hero-image {
   max-width: 100%;
   height: auto;
-  max-height: 480px;
+  max-height: 380px;
   object-fit: contain;
   filter: drop-shadow(0 0 35px rgba(211, 214, 223, 0.2));
 }
@@ -124,12 +124,12 @@
   gap: 10px;
   padding: 14px 28px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  color: white;
-  border: 2px solid white;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--primary-accent);
+  /* border: 2px solid white; */
   border-radius: 15px;
-  box-shadow: 0 4px 15px white;
+  /* box-shadow: 0 4px 15px white; */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 20;
   overflow: hidden;
@@ -143,9 +143,9 @@
 
 .hero-whatsapp-btn:hover {
   background-color: transparent;
-  color: white;
+  color: rgba(255, 255, 255, 0.865);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px -10px white;
+  /* box-shadow: 0 10px 20px -10px white; */
 }
 
 /* Typewriter animation for "WhatsApp" text */

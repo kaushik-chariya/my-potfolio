@@ -7,7 +7,7 @@
   --font-color: #ffffff;       /* Dark Charcoal */
   --card-bg: hero-section#e2d0d0d2;         /* Dark Card Background */
   --primary-accent: #d3d6dfab;   /* Terracotta */   /*c8d9e3d7 */
-  --secondary-accent: #46587c8c; /* Light Beige for backgrounds */
+  --secondary-accent: #46587c95; /* Light Beige for backgrounds   384959  46587c8c*/
   --subtle-stroke: #dcdcebd8;   /* Light Grey for borders */
   --shadow-color: rgba(255, 255, 255, 0.375);
 
@@ -37,6 +37,26 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+
+main {
+  position: relative;  /* yeh zaroori hai */
+}
+
+
+main::before {
+  content: '';
+  position: absolute;
+  inset: 0;  /* top, right, bottom, left = 0 */
+  background-image: url('/public/—Pngtree—abstract wave dot blue _5505168.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;  /* sirf image ki opacity kam hogi */
+  z-index: -1;  /* image peeche chali jayegi */
+  /* height: 1670px; */
+  height: 1900px;
 }
 
 
