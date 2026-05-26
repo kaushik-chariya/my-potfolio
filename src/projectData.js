@@ -8,8 +8,8 @@ export const projectsData = [
     description: "End-to-end email threat detection system integrating Gmail OAuth2, a custom NLP pipeline, and a production-deployed Naive Bayes model to classify spam, phishing, and fraud emails in real-time.",
     githubLink: "https://github.com/kaushik-chariya/Deep-Shield-Mail",
     liveLink: "https://deepshieldmail.duckdns.org",
-    imageUrl: "/public/mails.webp",
-    heroImage: "/public/deeplshaild.png",
+    imageUrl: "/mails.webp",
+    heroImage: "/deeplshaild.png",
     overview: "Deep Shield Mail is a production-grade, end-to-end MLOps system that connects directly to your Gmail inbox via OAuth2 and classifies emails as SAFE or SPAM in real-time. It combines a Naive Bayes model (97.8% accuracy) with a hybrid feature pipeline — TF-IDF on email body (30,000 features) and 12 hand-crafted NLP meta-features — and is fully deployed on AWS EC2 behind Nginx with SSL, containerized via Docker, and tracked with MLflow and DVC.",
     keyFeatures: [
       "**Gmail OAuth2 Integration:** Securely connects to your live Gmail inbox with read-only permissions — no write access, no email storage after logout.",
@@ -30,8 +30,8 @@ export const projectsData = [
     description: "End-to-end MLOps system that predicts vehicle insurance purchase intent from customer and vehicle data, with a six-stage automated pipeline and one-click AWS deployment.",
     githubLink: "https://github.com/kaushik-chariya/InsureAI-MLops",
     liveLink: "http://18.208.179.218:8000",
-    imageUrl: "/public/insurance_main.png",
-    heroImage: "/public/insureAI.png",
+    imageUrl: "/insurance_main.png",
+    heroImage: "/insureAI.png",
     overview: "InsureAI MLOps is a production-grade machine learning system built for vehicle insurance prediction. It implements a six-stage automated pipeline — from PostgreSQL data ingestion to model deployment on AWS EC2 — containerized with Docker and fully automated through GitHub Actions CI/CD. The live application supports both real-time prediction and on-demand model retraining via a web UI.",
     keyFeatures: [
       "**Six-Stage MLOps Pipeline:** Automated flow from Data Ingestion → Validation → Transformation → Training → Evaluation → Model Pusher, all orchestrated through a single training pipeline.",
@@ -53,8 +53,8 @@ export const projectsData = [
     description: "A full-stack e-commerce analytics dashboard that lets users explore and filter sales data across regions, categories, and time periods — transforming raw transactional data into clear business insights through interactive charts and key performance metrics.",
     // liveLink: "#",
     githubLink: "https://github.com/kaushik-chariya/ecommerce-sales-analysis",
-    imageUrl: "../public/back-analysis.jpg",
-    heroImage: "../public/main.jpg", 
+    imageUrl: "/back-analysis.jpg",
+    heroImage: "/main.jpg", 
     overview: "E-commerce Sales Dashboard is a Flask-based analytics tool backed by PostgreSQL that lets users slice and explore sales data across regions, categories, segments, and time periods. It provides key business metrics — total sales, order volume, unique products — alongside interactive Chart.js visualizations that update instantly as filters change.",
     keyFeatures: [
       "**Multi-Dimensional Filtering:** Filter sales data by Region, Category, Sub-category, Segment, Ship Mode, State, and custom date ranges — all updating the dashboard instantly.",

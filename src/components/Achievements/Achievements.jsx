@@ -29,7 +29,7 @@ const achievementsData = [
     provider: "HP Foundation",
     providerLink: "https://www.life-global.org",
     skills: ["Python", "SQL", "Data Analysis (np, pd)", "Data Visualization (plt, sns)", 'Fundamentals of ML'],
-    link: "/public/Data Science & Analytics.pdf"
+    link: "/Data Science & Analytics.pdf"
   },
   {
     title: "🐍 Data Analysis with Python",
@@ -37,7 +37,7 @@ const achievementsData = [
     provider: "IBM",
     providerLink: "https://cognitiveclass.ai",
     skills: ["Python", "NumPy", "Pandas",'Data Cleaning','Data Visualization','Exploratory Data Analysis'],
-    link: "/public/data-analysis.pdf"
+    link: "/data-analysis.pdf"
   },
   {
     title: "📈 Data Visualisation",
@@ -45,7 +45,7 @@ const achievementsData = [
     provider: "Tata Group",
     providerLink: "https://www.theforage.com/",
     skills: ["Data Visualization", "Exploratory Data Analysis", "Visual Storytelling",'Data Communication'],
-    link: "/public/data-visulation.pdf"
+    link: "/data-visulation.pdf"
   },
   {
     title: "🗄️ SQL & Relational Databases",
@@ -53,7 +53,7 @@ const achievementsData = [
     provider: "IBM",
     providerLink: "https://cognitiveclass.ai/",
     skills: ["SQL", "Database Design", "Relational Databases",'Joins and Subqueries','Query Optimization'],
-    link: "/public/sql-certificate.pdf"
+    link: "/sql-certificate.pdf"
   }
 ];
 
