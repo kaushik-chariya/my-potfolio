@@ -8,12 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const achievementsData = [
   {
-    title: "Machine Learning",
+    title: "🚀 MLOps",
     icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
     provider: "AWS Foundations",
-    providerLink: "https://aws.amazon.com/certification/",
-    skills: ["Supervised Learning", "Regression", "Decision Trees", "Neural Networks", "Unsupervised Learning"],
-    link: "https://www.coursera.org"
+    providerLink: "https://olympus.mygreatlearning.com/courses/102980/modules/items/4889358",
+    skills: ["MLflow", "DVC", "Docker", "GitHub Actions", "AWS EC2 | AWS ECR | AWS S3",'CI/CD Pipelines'],
+    link: "https://olympus.mygreatlearning.com/courses/102980/modules/items/4889358"
   },
   {
     title: "🧠 Machine Learning",
@@ -36,7 +36,7 @@ const achievementsData = [
     icon: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
     provider: "IBM",
     providerLink: "https://cognitiveclass.ai",
-    skills: ["Python", "NumPy", "Pandas", "Data Analysis",'Data Cleaning','Exploratory Data Analysis','Data Visualization'],
+    skills: ["Python", "NumPy", "Pandas",'Data Cleaning','Data Visualization','Exploratory Data Analysis'],
     link: "/public/data-analysis.pdf"
   },
   {
@@ -44,7 +44,7 @@ const achievementsData = [
     icon: "https://cdn.simpleicons.org/tata",
     provider: "Tata Group",
     providerLink: "https://www.theforage.com/",
-    skills: ["Data Visualization", "Business Insights", "Exploratory Data Analysis", "Visual Storytelling",'Data Communication'],
+    skills: ["Data Visualization", "Exploratory Data Analysis", "Visual Storytelling",'Data Communication'],
     link: "/public/data-visulation.pdf"
   },
   {

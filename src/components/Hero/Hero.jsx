@@ -122,7 +122,7 @@ const Hero = () => {
           <div className="hero-image-wrapper">
             <img src="/robo-ai.png" alt="Robo AI Mascot" className="hero-image" />
             <a 
-              href="https://wa.me/919016883191?text=Hello" 
+              href="https://wa.me/919016883191?text=Hello Kaushik" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hero-whatsapp-btn"

@@ -49,14 +49,18 @@ const About = () => {
             Hi, I'm Kaushik Chariya.
           </p>
           <p className="about-content-item">
-            I am currently pursuing a Master of Computer Applications (MCA) from Gujarat Technological University. I previously completed my Bachelor of Computer Applications from Bhakta Kavi Narsinh Mehta University. I have a strong interest in Artificial Intelligence, Data Science, and Machine Learning, and I enjoy working on real-world problems using data-driven approaches.
+          I am currently pursuing a Master of Computer Applications (MCA) from Gujarat Technological University, having completed my Bachelor of Computer Applications from Bhakta Kavi Narsinh Mehta University. My core interests lie in Artificial Intelligence, Data Science, and MLOps — I don't just build models, I build systems that take them all the way to production.
           </p>
           <p className="about-content-item">
-            I started with the fundamentals of Python programming and gradually moved into data analysis using libraries such as Pandas, NumPy, and Matplotlib. Exploring datasets through Exploratory Data Analysis (EDA) helped me understand patterns, trends, and relationships within data. As I progressed, I learned various machine learning algorithms including Linear Regression, Logistic Regression, Decision Trees, and Random Forest. I also focused on understanding key concepts such as model evaluation, feature engineering, and handling real-world data challenges like missing values and outliers.
+          My journey started with Python fundamentals and data analysis, but quickly evolved into end-to-end ML engineering. I've developed a strong foundation in the full data science stack — from exploratory data analysis and feature engineering to training and evaluating models using Scikit-learn, handling real-world challenges like missing values, class imbalance, and data drift along the way.
+
           </p>
           <p className="about-content-item">
-            I'm passionate about listening to music and keeping up with new trends and emerging technologies, always curious to learn and explore beyond my comfort zone. I enjoy discovering innovative ideas, staying updated with the latest advancements in technology, and continuously enhancing my knowledge through self-learning and exploration.
+          What sets my work apart is the MLOps layer. I've built production-grade pipelines with automated training, model evaluation, and deployment — integrating tools like MLflow for experiment tracking, DVC for data versioning, and Docker for containerization. My projects are deployed on AWS using EC2, ECR, and S3, with full CI/CD automation through GitHub Actions. Whether it's a spam detection engine with Gmail OAuth2 integration or a vehicle insurance prediction system with a self-hosted deployment runner — I focus on building things that actually work in the real world, not just in notebooks.
           </p>
+          <p className="about-content-item">
+  I'm currently working on something close to my heart — an AI system aimed at helping the agricultural community by making intelligent tools accessible to those who need them most. It's a project that combines my technical skills with a genuine desire to create real social impact.
+</p>
       </div>
     </section>
   );

@@ -53,9 +53,8 @@ main::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.15;  /* sirf image ki opacity kam hogi */
+  opacity: 0.3;  /* sirf image ki opacity kam hogi */
   z-index: -1;  /* image peeche chali jayegi */
-  /* height: 1670px; */
   height: 1900px;
 }
 

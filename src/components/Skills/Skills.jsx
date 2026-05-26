@@ -7,8 +7,8 @@ import './Skills.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = {
-  "Data Science & ML": ["NumPy", 'Pandas',"Scikit-Learn",'Statsmodels', "OpenCV"],
-  "MLOps & Deployment" : ['Docker','Kubernetes','MLflow','DVC','FastAPI','GitHub Actions'],
+  "Data Science & ML": ["NumPy", 'Pandas',"Scikit-Learn",'Statsmodels', "Feature Engineering",'EDA',"NLP", "TF-IDF",],
+  "MLOps & Deployment" : ['MLflow','DVC','Docker','GitHub Actions','AWS EC2','AWS ECR | AWS S3',' CI/CD Pipelines'],
   "Programming Languages": ["Python", "SQL", "JavaScript"],
   "Databases": ["MySQL", "PostgreSQL"],
   'Monitoring & Visualization' : ["Matplotlib", "Seaborn",'Plotly', "Excel", "Tableau",'Grafana','Prometheus'],
