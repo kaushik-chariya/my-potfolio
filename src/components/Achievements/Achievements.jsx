@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const achievementsData = [
   {
     title: "🚀 MLOps",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    icon: "https://mma.prnewswire.com/media/1458111/Great_Learning_Logo.jpg?utm_source=chatgpt.com",
     provider: "AWS Foundations",
     providerLink: "https://olympus.mygreatlearning.com/courses/102980/modules/items/4889358",
     skills: ["MLflow", "DVC", "Docker", "GitHub Actions", "AWS EC2 | AWS ECR | AWS S3",'CI/CD Pipelines'],
