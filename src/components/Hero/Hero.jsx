@@ -120,7 +120,7 @@ const Hero = () => {
 
         <div className="hero-image-container">
           <div className="hero-image-wrapper">
-            <img src="/robo-ai.png" alt="Robo AI Mascot" className="hero-image" />
+            <img src="/—Pngtree—3d cute small robot on_17775821.png" alt="Robo AI Mascot" className="hero-image" />
             <a 
               href="https://wa.me/919016883191?text=Hello Kaushik" 
               target="_blank" 
