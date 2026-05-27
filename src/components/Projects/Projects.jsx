@@ -16,7 +16,7 @@ const Projects = () => {
       scrollTrigger: {
         trigger: container.current,
         start: 'top 85%',
-        toggleActions: "play none none none"
+        toggleActions: "play none none reset"
       },
       duration: 0.8,
       y: 100,
@@ -24,6 +24,7 @@ const Projects = () => {
       stagger: 0.2,
       ease: 'power3.out'
     });
+    return () => ScrollTrigger.getAll().forEach(t => t.kill());
   }, { scope: container });
 
   return (
