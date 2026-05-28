@@ -1,16 +1,116 @@
-# React + Vite
+# 🚀 Kaushik Chariya — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated personal portfolio built with **React 19**, **GSAP**, and **Vite** — deployed live on Netlify.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [kaushik-chariya.netlify.app](https://kaushik-chariya.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Smooth Animations** — GSAP + ScrollTrigger powered transitions and scroll-based reveals
+- **Custom Cursor** — Fully custom cursor component with hover effects
+- **Ambient Background** — Dynamic animated background that reacts to the page
+- **Project Detail Pages** — Dedicated pages for each project with full case study writeups
+- **Responsive Design** — Works seamlessly across desktop and mobile
+- **SPA Routing** — Client-side navigation with React Router v7
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 19 |
+| Animations | GSAP 3 + ScrollTrigger + SplitText |
+| Routing | React Router DOM v7 |
+| Build Tool | Vite (Rolldown) |
+| Deployment | Netlify |
+| Styling | Plain CSS (component-scoped) |
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── About/          # About section
+│   ├── Achievements/   # Certifications & achievements
+│   ├── AmbientBackground/  # Animated background
+│   ├── Contact/        # Contact form section
+│   ├── CustomCursor/   # Custom mouse cursor
+│   ├── Experience/     # Work experience timeline
+│   ├── Footer/         # Footer
+│   ├── Hero/           # Hero / landing section
+│   ├── Navbar/         # Navigation bar
+│   ├── Projects/       # Projects grid
+│   └── Skills/         # Skills section
+├── pages/
+│   ├── HomePage.jsx         # Main page
+│   └── ProjectDetailPage.jsx # Individual project case study
+├── projectData.js      # All project content & metadata
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 🗂️ Projects Featured
+
+### 1. Deep Shield Mail — AI-Powered Email Spam Detection
+Production-grade MLOps system detecting spam & phishing emails in real-time using Naive Bayes + NLP, deployed on AWS with full CI/CD.
+
+**Tech:** Python · Flask · Scikit-learn · Naive Bayes · TF-IDF · Gmail API · MLflow · DVC · Docker · AWS EC2 · AWS ECR
+
+🔗 [GitHub](https://github.com/kaushik-chariya/Deep-Shield-Mail) · [Live](https://deepshieldmail.duckdns.org)
+
+---
+
+### 2. InsureAI MLOps — Vehicle Insurance Purchase Prediction
+End-to-end MLOps pipeline predicting vehicle insurance purchase intent with automated training, evaluation, and one-click AWS deployment.
+
+**Tech:** Python · Scikit-learn · PostgreSQL · FastAPI · Docker · AWS EC2 · AWS ECR · AWS S3 · GitHub Actions
+
+🔗 [GitHub](https://github.com/kaushik-chariya/InsureAI-MLops) · [Live](http://18.208.179.218:8000)
+
+---
+
+### 3. E-commerce Sales Dashboard
+Interactive sales analytics dashboard with dynamic multi-dimensional filtering and real-time chart visualizations.
+
+**Tech:** Python · Flask · PostgreSQL · Pandas · Matplotlib · Seaborn · Chart.js
+
+🔗 [GitHub](https://github.com/kaushik-chariya/ecommerce-sales-analysis)
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/kaushik-chariya/portfolio-website.git
+cd portfolio-website
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## 📬 Contact
+
+Feel free to reach out via the [contact form](https://kaushik-chariya.netlify.app/#contact) on the site.
+
+---
+
+> Built with ❤️ by Kaushik Chariya
