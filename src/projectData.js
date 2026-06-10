@@ -1,5 +1,30 @@
 // src/projectData.js
 export const projectsData = [
+
+  {
+    slug: "NeuroScan-AI",
+    title: "NeuroScan AI — AI-Powered Brain Tumor Detection & Segmentation System",
+    subtitle: "Production-grade brain tumor detection & segmentation system combining CNN, YOLOv8x, and U-Net into a 3-stage AI pipeline with automated PDF diagnostic reports — deployed live on AWS EC2.",
+    tech: ["Python", "TensorFlow", "PyTorch", "YOLOv8", "U-Net", "Flask", "DVC", "OpenCV", "Docker", "AWS EC2", "AWS ECR", "GitHub Actions", "MLflow", "ReportLab", ],
+    description: "Production-grade deep learning pipeline that detects, localizes, and segments brain tumors from MRI scans using CNN, YOLOv8x, and U-Net++ — with automated PDF diagnostic reports, deployed live on AWS EC2.",
+    liveLink: "http://34.233.135.78:8000",
+    githubLink: "https://github.com/kaushik-chariya/NeuroScan-AI",
+    imageUrl: "/mainNeuro.png",
+    heroImage: "/NeuroInside.png", 
+    overview: "NeuroScan AI is a 3-stage deep learning pipeline built on Flask and deployed on AWS EC2 that analyzes brain MRI scans to detect, localize, and segment tumors. It runs a CNN classifier (91.17% accuracy, 95.97% AUC) for binary tumor detection, followed by YOLOv8x (mAP50: 91.9%) for bounding-box localization of 3 tumor sub-regions, and U-Net++ ResNet34 (Dice: 0.84, IoU: 0.73) for pixel-level segmentation — all trained on the BraTS 2021 dataset across T1ce, T2, and FLAIR modalities.",
+    keyFeatures: [
+      "**3-Stage AI Pipeline:** CNN → YOLOv8x → U-Net++ runs sequentially — classification first, then localization, then pixel-level segmentation — giving a complete tumor analysis in a single scan.",
+      "**Automated PDF Reports:** Every scan generates a downloadable diagnostic report with patient info, confidence scores, YOLO bounding-box tables, U-Net Dice score, segmentation coverage %, and all 3 annotated MRI images.",
+      "**DICOM Support:** Upload standard PNG/JPG or raw .dcm medical imaging files directly — making it compatible with real clinical workflows.",
+      "**Patient Management & Scan History:** Full patient record system with linked scan history, searchable archive, and per-scan report downloads.",
+      "**Demo Mode:** Built-in Normal and Tumor sample MRI scans for instant try-out — no upload needed.",
+      "**MLOps Stack:** Model weights versioned with DVC + DagHub, experiments tracked with MLflow, containerized with Docker, deployed on AWS EC2 via GitHub Actions CI/CD."
+    ],
+    challenges: "The main challenge was orchestrating 3 completely different model architectures — TensorFlow CNN, PyTorch YOLOv8x, and segmentation-models-pytorch U-Net++ — into a single seamless inference pipeline without framework conflicts, while keeping response times fast enough for a web app.",
+    solution: "I built a unified prediction pipeline that handles framework isolation, sequential model loading, and image preprocessing for each stage independently. DVC + DagHub manages model artifact versioning so the pipeline always pulls the correct model weights during deployment. Docker containerization ensures consistent environments across local and AWS EC2.",
+    learnings: "This project taught me that building a multi-model pipeline is fundamentally a systems engineering problem, not just an ML problem. The real complexity is in the glue code — preprocessing, postprocessing, and passing outputs cleanly between stages. I also learned how much MLOps tooling (DVC, MLflow, GitHub Actions) reduces deployment friction once the system grows beyond a single model."
+  },
+
   {
     slug: "Deep Shield Mail — AI-Powered Email Spam Detection⁠",
     title: "Deep Shield Mail — AI-Powered Email Spam Detection⁠",
@@ -8,7 +33,7 @@ export const projectsData = [
     description: "End-to-end email threat detection system integrating Gmail OAuth2, a custom NLP pipeline, and a production-deployed Naive Bayes model to classify spam, phishing, and fraud emails in real-time.",
     githubLink: "https://github.com/kaushik-chariya/Deep-Shield-Mail",
     liveLink: "https://deepshieldmail.duckdns.org",
-    imageUrl: "/mail_hero.png",
+    imageUrl: "/MainMail.png",
     heroImage: "/deeplshaild.png",
     overview: "Deep Shield Mail is a production-grade, end-to-end MLOps system that connects directly to your Gmail inbox via OAuth2 and classifies emails as SAFE or SPAM in real-time. It combines a Naive Bayes model (97.8% accuracy) with a hybrid feature pipeline — TF-IDF on email body (30,000 features) and 12 hand-crafted NLP meta-features — and is fully deployed on AWS EC2 behind Nginx with SSL, containerized via Docker, and tracked with MLflow and DVC.",
     keyFeatures: [
@@ -45,25 +70,26 @@ export const projectsData = [
     learnings: "This project solidified my understanding that MLOps is fundamentally a software engineering problem. Clean abstractions (entity classes, modular components), proper secret management, and a well-defined pipeline contract matter far more than the model itself. I also learned how fragile CI/CD pipelines can be without proper health checks — adding the /training endpoint for on-demand retraining saved hours of debugging."
   },
 
-  {
-    slug: "ecommerce-sales-dashboard",
-    title: "E-commerce Sales Dashboard",
-    subtitle: "Interactive sales analytics dashboard with dynamic filtering and real-time chart visualizations powered by Flask and PostgreSQL.",
-    tech: ["Python", "Flask", "PostgreSQL", "Pandas", "Matplotlib", "Seaborn", "Chart.js", "HTML", "CSS"],
-    description: "A full-stack e-commerce analytics dashboard that lets users explore and filter sales data across regions, categories, and time periods — transforming raw transactional data into clear business insights through interactive charts and key performance metrics.",
-    // liveLink: "#",
-    githubLink: "https://github.com/kaushik-chariya/ecommerce-sales-analysis",
-    imageUrl: "/sale_main.png",
-    heroImage: "/sale_inside_hero.png", 
-    overview: "E-commerce Sales Dashboard is a Flask-based analytics tool backed by PostgreSQL that lets users slice and explore sales data across regions, categories, segments, and time periods. It provides key business metrics — total sales, order volume, unique products — alongside interactive Chart.js visualizations that update instantly as filters change.",
-    keyFeatures: [
-      "**Multi-Dimensional Filtering:** Filter sales data by Region, Category, Sub-category, Segment, Ship Mode, State, and custom date ranges — all updating the dashboard instantly.",
-      "**Key Business Metrics:** At-a-glance KPIs for Total Sales, Total Orders, and Unique Products, giving a quick snapshot of overall business health.",
-      "**Interactive Charts:** Category-wise sales breakdown, region-wise performance comparison, and monthly sales trend charts — all rendered with Chart.js.",
-      "**PostgreSQL Backend:** Sales data stored in a structured relational schema, queried dynamically via Pandas for flexible, filter-driven aggregations."
-    ],
-    challenges: "The main challenge was making all filters work together — applying multiple simultaneous filters (region + category + date range) while keeping queries efficient and the UI responsive.",
-    solution: "I built a dynamic SQL query builder in Flask that composes WHERE clauses based on whichever filters are active, so only relevant data is fetched from PostgreSQL. Pandas handles the aggregation layer before passing results to Chart.js for rendering.",
-    learnings: "This project taught me how much value a well-designed filter system adds to a dashboard. I also learned that the real work in analytics tools isn't the charts — it's the clean data pipeline and query logic that feeds them."
-  },
-];
+  // {
+  //   slug: "ecommerce-sales-dashboard",
+  //   title: "E-commerce Sales Dashboard",
+  //   subtitle: "Interactive sales analytics dashboard with dynamic filtering and real-time chart visualizations powered by Flask and PostgreSQL.",
+  //   tech: ["Python", "Flask", "PostgreSQL", "Pandas", "Matplotlib", "Seaborn", "Chart.js", "HTML", "CSS"],
+  //   description: "A full-stack e-commerce analytics dashboard that lets users explore and filter sales data across regions, categories, and time periods — transforming raw transactional data into clear business insights through interactive charts and key performance metrics.",
+  //   // liveLink: "#",
+  //   githubLink: "https://github.com/kaushik-chariya/ecommerce-sales-analysis",
+  //   imageUrl: "/sale_main.png",
+  //   heroImage: "/sale_inside_hero.png", 
+  //   overview: "E-commerce Sales Dashboard is a Flask-based analytics tool backed by PostgreSQL that lets users slice and explore sales data across regions, categories, segments, and time periods. It provides key business metrics — total sales, order volume, unique products — alongside interactive Chart.js visualizations that update instantly as filters change.",
+  //   keyFeatures: [
+  //     "**Multi-Dimensional Filtering:** Filter sales data by Region, Category, Sub-category, Segment, Ship Mode, State, and custom date ranges — all updating the dashboard instantly.",
+  //     "**Key Business Metrics:** At-a-glance KPIs for Total Sales, Total Orders, and Unique Products, giving a quick snapshot of overall business health.",
+  //     "**Interactive Charts:** Category-wise sales breakdown, region-wise performance comparison, and monthly sales trend charts — all rendered with Chart.js.",
+  //     "**PostgreSQL Backend:** Sales data stored in a structured relational schema, queried dynamically via Pandas for flexible, filter-driven aggregations."
+  //   ],
+  //   challenges: "The main challenge was making all filters work together — applying multiple simultaneous filters (region + category + date range) while keeping queries efficient and the UI responsive.",
+  //   solution: "I built a dynamic SQL query builder in Flask that composes WHERE clauses based on whichever filters are active, so only relevant data is fetched from PostgreSQL. Pandas handles the aggregation layer before passing results to Chart.js for rendering.",
+  //   learnings: "This project taught me how much value a well-designed filter system adds to a dashboard. I also learned that the real work in analytics tools isn't the charts — it's the clean data pipeline and query logic that feeds them."
+  // }
+
+  ];
